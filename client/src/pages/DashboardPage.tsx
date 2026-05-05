@@ -87,7 +87,7 @@ export function DashboardPage() {
                   <div>
                     <strong>{task.title}</strong>
                     <p>
-                      {task.project?.title} · {formatDate(task.dueDate)}
+                      {task.project?.title} - {formatDate(task.dueDate)}
                     </p>
                   </div>
                   <StatusBadge value={task.status} label={task.statusLabel} />
@@ -109,7 +109,7 @@ export function DashboardPage() {
                 <strong>{activity.actor.name}</strong>
                 <p>{activity.message}</p>
                 <span>
-                  {activity.task?.project?.title ?? "Project"} · {new Date(activity.createdAt).toLocaleString()}
+                  {activity.task?.project?.title ?? "Project"} - {new Date(activity.createdAt).toLocaleString()}
                 </span>
               </div>
             ))}
