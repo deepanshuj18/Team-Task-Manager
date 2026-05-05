@@ -28,7 +28,7 @@ export function AppShell() {
           <div>
             <strong>{user?.name}</strong>
             <p>
-              {user?.role} � {user?.email}
+              {user?.role} • {user?.email}
             </p>
           </div>
           <button className="button button-secondary" onClick={handleLogout} type="button">
