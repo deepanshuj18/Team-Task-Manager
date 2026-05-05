@@ -278,7 +278,7 @@ export function ProjectDetailsPage() {
                   <div>
                     <strong>{member.user.name}</strong>
                     <p>
-                      {member.user.role} · {member.user.email}
+                      {member.user.role} Â· {member.user.email}
                     </p>
                   </div>
                   {isAdmin && project.ownerId !== member.userId ? (
