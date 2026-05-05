@@ -20,22 +20,30 @@ export function AppShell() {
             <p>Project control center</p>
           </div>
         </Link>
+
         <nav className="nav-links">
           <NavLink to="/dashboard">Dashboard</NavLink>
           <NavLink to="/projects">Projects</NavLink>
         </nav>
+
         <div className="sidebar-footer">
           <div>
             <strong>{user?.name}</strong>
             <p>
-              {user?.role} • {user?.email}
+              {user?.role} - {user?.email}
             </p>
           </div>
-          <button className="button button-secondary" onClick={handleLogout} type="button">
+
+          <button
+            className="button button-secondary"
+            onClick={handleLogout}
+            type="button"
+          >
             Logout
           </button>
         </div>
       </aside>
+
       <main className="content-shell">
         <Outlet />
       </main>
